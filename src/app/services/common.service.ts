@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -72,5 +73,17 @@ export class CommonService {
          ]}]
     return result;
 
+  }
+
+  getCourse(){
+    return new Observable<any>((observer)=>{
+      setTimeout(() => {
+          let course = {
+            id:101,
+            description: 'Angular For Beginners'
+          };
+          observer.next(course);      
+      }, 2000); 
+  })
   }
 }

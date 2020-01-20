@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StorageService } from '../../services/storage.service';
+import { CommonService } from '../../services/common.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -10,17 +12,13 @@ export class HomeComponent implements OnInit {
   
   public keyword: string;
   public historyList: any[] = [];
-
   
   public task:string;
   public todolist:any[]=[];
 
-  course = {
-    id:1,
-    description: 'Angular For Beginners'
-  };
+  public course:  Observable<{}>;
 
-  constructor(public storage: StorageService) { 
+  constructor(public storage: StorageService, public common: CommonService) { 
    
   }
 
@@ -38,6 +36,8 @@ export class HomeComponent implements OnInit {
     if(todolist){
       this.todolist=todolist;        
     }
+
+    this.course = this.common.getCourse();
   
   }
 
@@ -97,6 +97,5 @@ export class HomeComponent implements OnInit {
   checkboxChage(){
     this.storage.set('todolist', this.todolist); 
   }
-
 
 }

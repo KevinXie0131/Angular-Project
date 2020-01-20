@@ -41,10 +41,10 @@
 
 <div appHighlight>Highlight me!</div>
 
-<div *ngIf="course as result else loading">
+<div *ngIf="course | async as result else loading">
     <p>{{result.description}}</p>
 </div>
 
 <ng-template #loading>
-    <p>Condition is false ...</p>
+    <p>Data is loading ...</p>
 </ng-template>
