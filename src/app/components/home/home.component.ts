@@ -15,6 +15,11 @@ export class HomeComponent implements OnInit {
   public task:string;
   public todolist:any[]=[];
 
+  course = {
+    id:1,
+    description: 'Angular For Beginners'
+  };
+
   constructor(public storage: StorageService) { 
    
   }

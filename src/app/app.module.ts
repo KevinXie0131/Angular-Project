@@ -12,6 +12,8 @@ import { ProductComponent } from './components/product/product.component';
 import { StorageService } from './services/storage.service';
 import { CommonService } from './services/common.service';
 import { DetailsComponent } from './components/details/details.component';
+import { WelcomePipe } from './pipelines/welcome.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { DetailsComponent } from './components/details/details.component';
     HomeComponent,
     UserComponent,
     ProductComponent,
-    DetailsComponent
+    DetailsComponent,
+    WelcomePipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
