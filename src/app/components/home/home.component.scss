@@ -1,0 +1,55 @@
+
+
+h2{
+    text-align: center;
+}
+
+.find{
+  margin-left:10px;
+  width: 80px !important;
+}
+
+.search{
+
+    width: 400px;
+    margin: 20px auto;
+    input{
+
+        margin-bottom: 20px;
+
+        width: 300px;
+        height: 32px;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    button{
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.todolist{
+
+    width: 400px;
+    margin: 20px auto;
+    .form_input{
+
+        margin-bottom: 20px;
+
+        width: 300px;
+        height: 32px;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    li{
+
+        line-height: 60px;
+    }
+
+}

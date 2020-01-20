@@ -1,0 +1,36 @@
+<header class="index_header">
+			
+</header>			
+
+<div class="content">
+
+  
+      <div class="item" *ngFor="let item of list">        
+        <h3 class="item_cate">{{item.title}}</h3>
+        
+        <ul class="item_list">
+          <li *ngFor="let food of item.list">	
+            <div class="inner">
+              <a [routerLink]="[ '/pcontent', food._id ]">
+              
+                <img [src]="domain + food.img_url" />
+                <p class="title">{{food.title}}</p>						
+                <p class="price">${{food.price}}</p>
+              
+              </a>
+            </div>		
+          </li>
+                
+        </ul>
+        
+      </div>
+
+
+
+ 
+</div>
+
+<div class="bg" id="bg">
+  
+  
+</div>

@@ -1,0 +1,35 @@
+<h2>Search</h2>
+
+<div class="search">
+    <input type="text" [(ngModel)]="keyword" />  <button class="find" (click)="doSearch()">Find</button>
+
+    <hr>
+    
+    <ul>
+      <li *ngFor="let item of historyList;let key=index;">{{item}}   ------ <button (click)="deleteHistroy(key)">X</button></li>
+    </ul>
+
+
+</div>
+
+<h2>Todo List</h2>
+<div class="todolist">
+    <input class="form_input" type="text" [(ngModel)]="task" /> <button class="find" (click)="doAdd()">Add</button>
+
+    <hr>
+
+    <h3>Task to do</h3>    
+    <ul>
+      <li *ngFor="let item of todolist;let key=index;" [hidden]="item.status==1">
+        <input type="checkbox" [(ngModel)]="item.status" (change)="checkboxChage()" />  {{item.title}}   ------ <button (click)="deleteData(key)">X</button>
+      </li>
+    </ul>
+
+    <h3>Task done</h3>
+    <ul>
+        <li *ngFor="let item of todolist;let key=index;" [hidden]="item.status==0">       
+           <input type="checkbox" [(ngModel)]="item.status"   (change)="checkboxChage()"/>  {{item.title}}   ------ <button (click)="deleteData(key)">X</button>
+        </li>
+      </ul>
+
+</div>
