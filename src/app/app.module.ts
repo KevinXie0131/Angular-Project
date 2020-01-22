@@ -14,6 +14,7 @@ import { CommonService } from './services/common.service';
 import { DetailsComponent } from './components/details/details.component';
 import { WelcomePipe } from './pipelines/welcome.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
+import { ChildComponent } from './components/home/child/child.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     ProductComponent,
     DetailsComponent,
     WelcomePipe,
-    HighlightDirective
+    HighlightDirective,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

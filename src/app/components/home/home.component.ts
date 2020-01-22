@@ -18,6 +18,10 @@ export class HomeComponent implements OnInit {
 
   public course:  Observable<{}>;
 
+  public hero: string = 'jack';
+  public master: string = 'tom';
+  private counter: number = 1;
+
   constructor(public storage: StorageService, public common: CommonService) { 
    
   }
@@ -38,6 +42,13 @@ export class HomeComponent implements OnInit {
     }
 
     this.course = this.common.getCourse();
+
+    setInterval( ()=>{
+          this.hero = 'jack' + this.counter;
+          this.counter++;
+      },
+      5000
+    );
   
   }
 
